@@ -1097,13 +1097,35 @@ footer {
 .hero-video-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    105deg,
-    rgba(6, 8, 14, 0.97) 0%,
-    rgba(6, 8, 14, 0.93) 42%,
-    rgba(6, 8, 14, 0.68) 100%
-  );
+  background:
+    /* Left side: near-opaque to protect headline text */
+    linear-gradient(
+      to right,
+      rgba(6, 8, 14, 0.97) 0%,
+      rgba(6, 8, 14, 0.93) 28%,
+      rgba(6, 8, 14, 0.52) 52%,
+      rgba(6, 8, 14, 0.42) 100%
+    ),
+    /* Spotlight: opens the face/upper-body area, dark vignette toward edges */
+    radial-gradient(
+      ellipse 52% 62% at 68% 38%,
+      rgba(6, 8, 14, 0.05) 0%,
+      rgba(6, 8, 14, 0.25) 45%,
+      rgba(6, 8, 14, 0.65) 100%
+    );
   z-index: 1;
+}
+
+/* Mobile: simpler vertical gradient — lighter mid-frame where subject appears */
+@media (max-width: 768px) {
+  .hero-video-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(6, 8, 14, 0.96) 0%,
+      rgba(6, 8, 14, 0.78) 40%,
+      rgba(6, 8, 14, 0.88) 100%
+    );
+  }
 }
 
 .hero-emergency .hero-video-overlay {
