@@ -127,3 +127,36 @@ if (demoMessages.length) {
   const demo = document.querySelector('.hero-demo');
   if (demo) demoObserver.observe(demo);
 }
+
+// Video showcase — play when visible, pause when not
+const videoEls = document.querySelectorAll('.video-card video');
+
+if (videoEls.length) {
+  const videoObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const video = entry.target;
+      const card = video.closest('.video-card');
+      if (entry.isIntersecting) {
+        video.play().then(() => card.classList.add('playing')).catch(() => {});
+      } else {
+        video.pause();
+        card.classList.remove('playing');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  videoEls.forEach(v => videoObserver.observe(v));
+
+  // Click to toggle pause/play
+  document.querySelectorAll('.video-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const video = card.querySelector('video');
+      if (video.paused) {
+        video.play().then(() => card.classList.add('playing')).catch(() => {});
+      } else {
+        video.pause();
+        card.classList.remove('playing');
+      }
+    });
+  });
+}
