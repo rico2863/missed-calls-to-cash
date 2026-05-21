@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Free Demo | Missed Calls to Cash</title>
+  <meta name="description" content="Book your free 30-minute strategy call. See how AI answering, lead qualification, and automated follow-up can help your business stop losing leads." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ---- Calendar Page ---- */
+
+    .cal-hero {
+      position: relative;
+      padding: 148px 0 72px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .cal-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .cal-hero h1 { margin-bottom: 20px; }
+
+    .cal-hero .hero-sub {
+      margin: 0 auto;
+      font-size: 1.05rem;
+      max-width: 640px;
+    }
+
+    /* ---- Booking Layout ---- */
+    .booking-section { padding: 64px 0 100px; }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* ---- Aside ---- */
+    .booking-aside {
+      position: sticky;
+      top: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .advisor-card {
+      background: var(--bg-700);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 30px 28px;
+    }
+
+    .advisor-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 22px;
+    }
+
+    .advisor-photo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 2px solid var(--gold-border);
+      box-shadow: 0 0 28px var(--gold-glow), 0 0 0 4px rgba(240,160,32,0.08);
+      flex-shrink: 0;
+    }
+
+    .advisor-meta h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .advisor-meta span {
+      font-size: 0.76rem;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .on-call-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .on-call-text {
+      font-size: 0.875rem;
+      line-height: 1.78;
+      color: var(--text-muted);
+    }
+
+    /* ---- Trust chips ---- */
+    .trust-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .trust-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-600);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 5px 12px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .trust-chip::before {
+      content: '✓';
+      color: var(--gold);
+      font-size: 0.7rem;
+    }
+
+    /* ---- Expect card ---- */
+    .expect-card {
+      background: var(--bg-700);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+
+    .expect-heading {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .expect-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .expect-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .expect-icon {
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      background: var(--gold-glow);
+      border: 1px solid var(--gold-soft);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    .expect-text h5 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .expect-text p { font-size: 0.77rem; line-height: 1.55; }
+
+    /* ---- Calendar right ---- */
+    .calendar-intro { margin-bottom: 20px; }
+
+    .calendar-intro h2 {
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+
+    .calendar-intro p { font-size: 0.88rem; }
+
+    .calendar-wrap {
+      background: var(--bg-700);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .calendar-wrap::before {
+      content: 'Loading calendar…';
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .calendar-wrap iframe {
+      width: 100%;
+      min-height: 860px;
+      border: none;
+      display: block;
+      position: relative;
+      z-index: 1;
+      background: transparent;
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 980px) {
+      .booking-grid { grid-template-columns: 1fr; }
+      .booking-aside {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .booking-aside { display: flex; flex-direction: column; }
+      .calendar-wrap iframe { min-height: 720px; }
+      .cal-hero { padding: 130px 0 56px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="container nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">📞</div>
+      Missed Calls to <span class="accent">Cash</span>
+    </a>
+    <div class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="index.html#how-it-works">How It Works</a>
+      <a href="emergency-services.html">Emergency Services</a>
+      <a href="calendar.html" class="btn btn-primary btn-sm">Book a Demo</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="index.html#how-it-works">How It Works</a>
+  <a href="emergency-services.html">Emergency Services</a>
+  <a href="calendar.html" class="btn btn-primary">Book a Demo</a>
+</div>
+
+<!-- Hero -->
+<section class="cal-hero">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="container">
+    <div class="cal-hero-content">
+      <div class="hero-badge fade-up">
+        <span class="badge-dot"></span>
+        Free &nbsp;·&nbsp; No Pressure &nbsp;·&nbsp; 30 Minutes
+      </div>
+      <h1 class="fade-up" data-delay="1">
+        Book Your Free<br><span class="accent">Missed Calls to Cash Demo</span>
+      </h1>
+      <p class="hero-sub fade-up" data-delay="2">
+        See how an AI receptionist, chatbot, and follow-up system can help your business answer faster, capture more leads, and book more appointments.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Booking Section -->
+<section class="booking-section">
+  <div class="container">
+    <div class="booking-grid">
+
+      <!-- Aside: Advisor + Trust + Expect -->
+      <aside class="booking-aside">
+
+        <div class="advisor-card fade-up">
+          <div class="advisor-row">
+            <img
+              src="https://assets.cdn.filesafe.space/blXe0ZpLWUPix9vlrw0w/media/6a0e885f6f183767bde7ee58.jpg"
+              alt="Missed Calls to Cash — Your Advisor"
+              class="advisor-photo"
+            />
+            <div class="advisor-meta">
+              <h4>Missed Calls to Cash</h4>
+              <span>AI Lead Recovery Specialist</span>
+            </div>
+          </div>
+          <div class="on-call-label">On This Call</div>
+          <p class="on-call-text">
+            We'll look at where leads may be slipping through, show you a demo of the AI answering and follow-up system, and discuss whether it makes sense for your business — no obligation, no hard sell.
+          </p>
+          <div class="trust-chips">
+            <span class="trust-chip">Free</span>
+            <span class="trust-chip">30 min</span>
+            <span class="trust-chip">No commitment</span>
+          </div>
+        </div>
+
+        <div class="expect-card fade-up" data-delay="1">
+          <div class="expect-heading">What to Expect</div>
+          <div class="expect-list">
+            <div class="expect-item">
+              <div class="expect-icon">🔍</div>
+              <div class="expect-text">
+                <h5>Review Your Current Process</h5>
+                <p>A quick look at how your business handles incoming calls, texts, and lead follow-up right now.</p>
+              </div>
+            </div>
+            <div class="expect-item">
+              <div class="expect-icon">🤖</div>
+              <div class="expect-text">
+                <h5>Live AI Demo</h5>
+                <p>We'll walk through the AI answering, chat, and automated follow-up system with real examples from your industry.</p>
+              </div>
+            </div>
+            <div class="expect-item">
+              <div class="expect-icon">🗺️</div>
+              <div class="expect-text">
+                <h5>Simple Next Steps</h5>
+                <p>If it's a fit, we'll outline exactly what getting started looks like — clear, simple, no pressure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Calendar Embed -->
+      <div class="booking-main fade-up" data-delay="2">
+        <div class="calendar-intro">
+          <h2>Pick a Time That Works for You</h2>
+          <p>Choose any available slot below. You'll get a confirmation sent right away.</p>
+        </div>
+        <div class="calendar-wrap">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/booking/p0nOD7gFz8BsONNbsqEM"
+            title="Book a Demo — Missed Calls to Cash"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <div class="logo-icon">📞</div>
+        Missed Calls to <span class="accent">Cash</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="emergency-services.html">Emergency Services</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="calendar.html">Book a Demo</a>
+      </nav>
+    </div>
+    <p class="footer-copy">© 2025 Missed Calls to Cash. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
