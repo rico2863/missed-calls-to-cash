@@ -18,7 +18,8 @@
   --blue-glow: rgba(67, 97, 238, 0.15);
 
   --text: #e8edf8;
-  --text-muted: #6b7589;
+  --text-body: #d8e1ee;
+  --text-muted: #8fa3bf;
   --text-dim: #2e3547;
 
   --border: rgba(255, 255, 255, 0.06);
@@ -42,7 +43,7 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg-900);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -58,7 +59,7 @@ h1 { font-size: clamp(2.4rem, 5.5vw, 4.2rem); font-weight: 800; }
 h2 { font-size: clamp(1.8rem, 3.5vw, 2.75rem); font-weight: 700; }
 h3 { font-size: 1.1rem; font-weight: 700; }
 
-p { color: var(--text-muted); line-height: 1.75; }
+p { color: var(--text-body); line-height: 1.7; font-size: 1.125rem; }
 a { text-decoration: none; color: inherit; }
 ul, ol { list-style: none; }
 button { cursor: pointer; border: none; background: none; }
@@ -109,7 +110,7 @@ section { padding: var(--section-pad) 0; }
 .section-header h2 { margin-bottom: 14px; }
 
 .section-header p {
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   max-width: 560px;
   margin: 0 auto;
 }
@@ -396,8 +397,8 @@ section { padding: var(--section-pad) 0; }
 .hero-inner.centered h1 { margin-bottom: 22px; }
 
 .hero-sub {
-  font-size: 1.1rem;
-  color: var(--text-muted);
+  font-size: 1.125rem;
+  color: var(--text-body);
   max-width: 580px;
   margin-bottom: 40px;
   line-height: 1.8;
@@ -623,7 +624,7 @@ section { padding: var(--section-pad) 0; }
 
 .pain-icon { font-size: 2rem; margin-bottom: 18px; display: block; }
 .pain-card h3 { color: var(--text); margin-bottom: 10px; position: relative; z-index: 1; }
-.pain-card p { font-size: 0.9rem; line-height: 1.7; position: relative; z-index: 1; }
+.pain-card p { font-size: 1rem; line-height: 1.7; position: relative; z-index: 1; }
 
 /* ---- How It Works ---- */
 .steps-grid {
@@ -678,7 +679,7 @@ section { padding: var(--section-pad) 0; }
 }
 
 .step-card h3 { font-size: 0.95rem; margin-bottom: 10px; }
-.step-card p { font-size: 0.85rem; line-height: 1.65; }
+.step-card p { font-size: 1rem; line-height: 1.7; }
 
 /* ---- Industries ---- */
 .industry-grid {
@@ -753,7 +754,7 @@ section { padding: var(--section-pad) 0; }
   margin-bottom: 5px;
 }
 
-.benefit-text p { font-size: 0.84rem; line-height: 1.65; }
+.benefit-text p { font-size: 1rem; line-height: 1.7; }
 
 /* ---- FAQ ---- */
 .faq-list {
@@ -813,8 +814,8 @@ section { padding: var(--section-pad) 0; }
 
 .faq-answer-inner {
   padding-bottom: 22px;
-  color: var(--text-muted);
-  font-size: 0.93rem;
+  color: var(--text-body);
+  font-size: 1rem;
   line-height: 1.75;
 }
 
@@ -844,7 +845,7 @@ section { padding: var(--section-pad) 0; }
 .cta-section h2 { margin-bottom: 18px; }
 
 .cta-desc {
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   max-width: 480px;
   margin: 0 auto 40px;
 }
@@ -1067,7 +1068,7 @@ footer {
 
 .video-info { padding: 20px 22px 24px; }
 .video-info h3 { font-size: 1rem; color: var(--text); margin-bottom: 8px; }
-.video-info p { font-size: 0.84rem; line-height: 1.65; }
+.video-info p { font-size: 1rem; line-height: 1.7; }
 
 @media (max-width: 1024px) {
   .video-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1149,7 +1150,7 @@ footer {
 .split-text h2 { margin-bottom: 18px; }
 
 .split-text p {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.8;
   margin-bottom: 32px;
 }
@@ -1235,8 +1236,8 @@ footer {
 
 .showcase-caption {
   padding: 18px 22px 22px;
-  font-size: 0.88rem;
-  color: var(--text-muted);
+  font-size: 1rem;
+  color: var(--text-body);
   line-height: 1.65;
   font-style: italic;
 }
@@ -1350,7 +1351,7 @@ footer {
 .policy-content h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
 
 .policy-content p {
-  font-size: 0.93rem;
+  font-size: 1rem;
   line-height: 1.85;
   margin-bottom: 14px;
 }
@@ -1362,8 +1363,8 @@ footer {
 }
 
 .policy-content ul li {
-  color: var(--text-muted);
-  font-size: 0.93rem;
+  color: var(--text-body);
+  font-size: 1rem;
   line-height: 1.75;
   margin-bottom: 6px;
 }
@@ -1492,7 +1493,7 @@ footer {
 }
 
 .contact-form-card > p {
-  font-size: 0.88rem;
+  font-size: 1rem;
   margin-bottom: 32px;
 }
 
