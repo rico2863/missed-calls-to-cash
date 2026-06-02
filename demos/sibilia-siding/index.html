@@ -45,18 +45,28 @@
 
     <!-- ===================== HERO ===================== -->
     <section class="hero" id="hero">
-      <!-- Replace images/siding.png with your best finished exterior photo -->
+
+      <!-- Hero background video (autoplay, muted, loop) -->
+      <!-- Fallback: hero-bg div shows images/siding.png if video cannot play -->
       <div class="hero-bg" style="background-image: url('images/siding.png');"></div>
+
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="videos/sibilia-hero.mp4" type="video/mp4">
+        <!-- No video support: hero-bg fallback image shows instead -->
+      </video>
+
       <div class="hero-overlay"></div>
+
       <div class="container hero-content">
         <div class="hero-badge">Serving the DMV Since Day One</div>
         <h1>Siding, Soffit &amp; Trim Work Done Right in the DMV Area</h1>
         <p class="hero-sub">Exterior siding repairs, trim upgrades, soffit work, and home exterior improvements from a local contractor trusted for hands-on craftsmanship.</p>
         <div class="hero-buttons">
-          <a href="#estimate-form" class="btn btn-gold btn-lg">Request a Free Estimate</a>
+          <a href="#estimate-form" class="btn btn-gold btn-lg">&#128203; Request a Free Estimate</a>
           <a href="tel:+1XXXXXXXXXX" class="btn btn-outline btn-lg">&#128222; Call Now</a>
         </div>
       </div>
+
     </section>
 
     <!-- ===================== TRUST BAR ===================== -->
