@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>W J Contractors | Painting, Remodeling & Home Repairs – Northern Virginia</title>
+  <meta name="description" content="Licensed, insured, and bonded contractor serving Northern Virginia. Painting, remodeling, drywall, mold services, lead-safe renovation, and more. Call 703-814-2346." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-main">W J Contractors</span>
+        <span class="nav__logo-sub">Northern Virginia</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#estimate">Get Estimate</a></li>
+        <li><a href="tel:7038142346" class="nav__cta">Call 703-814-2346</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__video-wrap">
+      <video class="hero__video" autoplay muted loop playsinline poster="assets/images/houseRemodel.png">
+        <source src="assets/video/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content container">
+      <div class="hero__badge">Serving Northern Virginia Since Day One</div>
+      <h1 class="hero__headline">Painting, Remodeling<br />&amp; Home Repairs in<br />Northern Virginia</h1>
+      <p class="hero__sub">Licensed, insured, and bonded contractor providing professional painting, remodeling, drywall repair, carpentry, pressure washing, mold services, and lead-safe renovation work.</p>
+      <div class="hero__actions">
+        <a href="#estimate" class="btn btn--gold">Request an Estimate</a>
+        <a href="tel:7038142346" class="btn btn--outline">Call 703-814-2346</a>
+      </div>
+      <p class="hero__trust">Serving Northern Virginia &amp; surrounding suburbs &nbsp;·&nbsp; 7am–9pm Mon–Fri</p>
+    </div>
+    <div class="hero__scroll-hint">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <section class="trust-bar">
+    <div class="container trust-bar__grid">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div>
+          <strong>Virginia Class A</strong>
+          <span>DPOR Licensed Contractor<br />Lic. #2705156375</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <div>
+          <strong>30+ Years</strong>
+          <span>of Quality Workmanship</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        <div>
+          <strong>EPA Lead-Safe</strong>
+          <span>Certified &amp; Mold Certified</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <div>
+          <strong>Insured &amp; Bonded</strong>
+          <span>Full Coverage for Your Home</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <div>
+          <strong>Military Discount</strong>
+          <span>5% Off for Veterans,<br />Active Military &amp; First Responders</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">What We Do</p>
+        <h2 class="section-title">Home Services You Can Count On</h2>
+        <p class="section-desc">From a fresh coat of paint to a full kitchen remodel — we handle it all under one roof.</p>
+      </div>
+      <div class="services__grid">
+
+        <div class="service-card" data-animate>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="service-card__img-wrap">
+            <img src="assets/images/houseRemodel.png" alt="House exterior painting" loading="lazy" />
+          </div>
+          <h3>Interior &amp; Exterior Painting</h3>
+          <p>Premium paint applications for walls, ceilings, trim, cabinets, siding, and decks. Clean prep work, clean results.</p>
+          <ul>
+            <li>Residential interior painting</li>
+            <li>Exterior siding &amp; trim</li>
+            <li>Cabinet refinishing</li>
+            <li>Deck &amp; fence staining</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-animate>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div class="service-card__img-wrap">
+            <img src="assets/images/kitchen.png" alt="Kitchen remodel" loading="lazy" />
+          </div>
+          <h3>Kitchen &amp; Bathroom Remodeling</h3>
+          <p>Transform your kitchen or bathroom with professional remodeling work — cabinetry, tile, fixtures, and more.</p>
+          <ul>
+            <li>Custom kitchen renovations</li>
+            <li>Bathroom remodels</li>
+            <li>Tile &amp; flooring installation</li>
+            <li>Fixture upgrades</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-animate>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><path d="M9 20v-5h6v5"/></svg>
+          </div>
+          <div class="service-card__img-wrap">
+            <img src="assets/images/bathroom.png" alt="Basement remodeling" loading="lazy" />
+          </div>
+          <h3>Basement Remodeling</h3>
+          <p>Turn your unfinished basement into usable living space — from framing and drywall to flooring and painting.</p>
+          <ul>
+            <li>Framing &amp; drywall</li>
+            <li>Flooring installation (LVP, carpet)</li>
+            <li>Painting &amp; trim</li>
+            <li>Lighting &amp; finishing</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-animate>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <div class="service-card__img-wrap">
+            <img src="assets/images/houseRemodel.png" alt="Drywall repair" loading="lazy" />
+          </div>
+          <h3>Drywall &amp; Water Damage Repair</h3>
+          <p>Patch, repair, and restore damaged drywall and ceilings — including water leak damage and ceiling texture matching.</p>
+          <ul>
+            <li>Drywall patching &amp; replacement</li>
+            <li>Ceiling repair &amp; texture</li>
+            <li>Water damage restoration</li>
+            <li>Smooth finish prep</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-animate>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <div class="service-card__img-wrap">
+            <img src="assets/images/door.png" alt="Deck and carpentry" loading="lazy" />
+          </div>
+          <h3>Decks, Fences &amp; Carpentry</h3>
+          <p>Repair, refinish, or rebuild outdoor structures. Wood frame repair, custom carpentry, and fence work done right.</p>
+          <ul>
+            <li>Wood deck repair &amp; staining</li>
+            <li>Fence repair &amp; replacement</li>
+            <li>Carpentry &amp; wood frame repair</li>
+            <li>Door &amp; trim installation</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-animate>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="service-card__img-wrap">
+            <img src="assets/images/houseRemodel.png" alt="Pressure washing" loading="lazy" />
+          </div>
+          <h3>Pressure &amp; Soft Washing</h3>
+          <p>Restore your home's curb appeal with professional pressure and soft washing for siding, driveways, decks, and walkways.</p>
+          <ul>
+            <li>House siding &amp; soffits</li>
+            <li>Driveways &amp; walkways</li>
+            <li>Decks &amp; fences</li>
+            <li>Pre-paint surface prep</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-animate>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="service-card__img-wrap">
+            <img src="assets/images/bathroom.png" alt="Mold remediation" loading="lazy" />
+          </div>
+          <h3>Mold &amp; Water Intrusion Services</h3>
+          <p>Certified mold testing, remediation, and water intrusion solutions to protect your home and your family's health.</p>
+          <ul>
+            <li>Mold testing &amp; inspection</li>
+            <li>Mold remediation</li>
+            <li>Water intrusion services</li>
+            <li>Ozone air purification</li>
+          </ul>
+          <div class="service-card__cert">National Mold Certified #1851144814</div>
+        </div>
+
+        <div class="service-card" data-animate>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div class="service-card__img-wrap">
+            <img src="assets/images/houseRemodel.png" alt="Lead safe renovation" loading="lazy" />
+          </div>
+          <h3>Lead-Safe Renovation (RRP)</h3>
+          <p>EPA-certified Renovation, Repair, and Painting (RRP) work following lead-safe practices — protecting your family during renovations.</p>
+          <ul>
+            <li>EPA lead base paint testing</li>
+            <li>Lead-safe RRP practices</li>
+            <li>Pre-1978 home renovation</li>
+            <li>HOA &amp; condo violation remediation</li>
+          </ul>
+          <div class="service-card__cert">EPA Certified #NAT-F258535-1</div>
+        </div>
+
+      </div>
+
+      <div class="services__more">
+        <p>Also providing: Flooring installation (LVP &amp; carpet), handicap accessibility modifications, make-ready/turnover work, and junk removal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section class="why-us section" id="why-us">
+    <div class="container">
+      <div class="why-us__inner">
+        <div class="why-us__text" data-animate>
+          <p class="section-label">Why Homeowners Choose Us</p>
+          <h2 class="section-title">One Contractor.<br />Every Home Improvement Job.</h2>
+          <p class="why-us__intro">Most homeowners spend time chasing multiple contractors for different jobs. W J Contractors handles painting, remodeling, repairs, mold services, and lead-safe work — all under one licensed, insured contractor.</p>
+
+          <div class="why-features">
+            <div class="why-feature">
+              <div class="why-feature__icon">&#10003;</div>
+              <div>
+                <strong>Virginia Class A Licensed Contractor</strong>
+                <p>DPOR licensed for residential home improvements across Virginia. License #2705156375.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature__icon">&#10003;</div>
+              <div>
+                <strong>Fully Insured &amp; Bonded</strong>
+                <p>You're protected. We carry the coverage to back every job we do in your home.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature__icon">&#10003;</div>
+              <div>
+                <strong>Specialty Certifications</strong>
+                <p>Nationally certified for mold remediation and EPA-certified for lead-safe renovation work.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature__icon">&#10003;</div>
+              <div>
+                <strong>Interior &amp; Exterior Work</strong>
+                <p>From kitchens and basements to decks, fences, and siding — we work throughout the whole home.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature__icon">&#10003;</div>
+              <div>
+                <strong>Local to Northern Virginia</strong>
+                <p>Serving homeowners across Northern Virginia and the surrounding suburbs — familiar with local homes and conditions.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature__icon">&#10003;</div>
+              <div>
+                <strong>5% Military &amp; First Responder Discount</strong>
+                <p>We honor those who serve. Active military, veterans, and first responders receive 5% off their project.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-us__creds" data-animate>
+          <div class="cred-card">
+            <div class="cred-card__header">Credentials on File</div>
+            <div class="cred-item">
+              <div class="cred-badge">VA</div>
+              <div>
+                <strong>Virginia Class A Contractor</strong>
+                <span>DPOR Lic. #2705156375</span>
+              </div>
+            </div>
+            <div class="cred-item">
+              <div class="cred-badge">EPA</div>
+              <div>
+                <strong>EPA Lead-Safe Certified</strong>
+                <span>Cert. #NAT-F258535-1</span>
+              </div>
+            </div>
+            <div class="cred-item">
+              <div class="cred-badge">MOLD</div>
+              <div>
+                <strong>National Mold Certified</strong>
+                <span>Cert. #1851144814</span>
+              </div>
+            </div>
+            <div class="cred-item">
+              <div class="cred-badge">&#x1F512;</div>
+              <div>
+                <strong>Insured &amp; Bonded</strong>
+                <span>Full residential coverage</span>
+              </div>
+            </div>
+            <p class="cred-disclaimer">Credentials shown based on information presented on the current business website. Verify directly with the business owner.</p>
+          </div>
+
+          <div class="payment-card">
+            <p class="payment-card__title">Flexible Payment</p>
+            <p>Credit &amp; debit cards accepted · Financing available upon agreement</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Our Work</p>
+        <h2 class="section-title">Project Gallery</h2>
+        <p class="section-desc">A look at recent projects from around Northern Virginia.</p>
+      </div>
+      <div class="gallery__grid">
+        <div class="gallery__item gallery__item--wide" data-animate>
+          <img src="assets/images/houseRemodel.png" alt="House remodel – Northern Virginia" loading="lazy" />
+          <div class="gallery__caption">Exterior Remodel</div>
+        </div>
+        <div class="gallery__item" data-animate>
+          <img src="assets/images/kitchen.png" alt="Kitchen renovation" loading="lazy" />
+          <div class="gallery__caption">Kitchen Renovation</div>
+        </div>
+        <div class="gallery__item" data-animate>
+          <img src="assets/images/bathroom.png" alt="Bathroom remodel" loading="lazy" />
+          <div class="gallery__caption">Bathroom Remodel</div>
+        </div>
+        <div class="gallery__item" data-animate>
+          <img src="assets/images/door.png" alt="Carpentry and door work" loading="lazy" />
+          <div class="gallery__caption">Carpentry &amp; Door Work</div>
+        </div>
+      </div>
+      <p class="gallery__note">Additional project photos available upon request.</p>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS (placeholder) ===== -->
+  <section class="reviews section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">What Clients Say</p>
+        <h2 class="section-title">Customer Feedback</h2>
+      </div>
+      <div class="reviews__grid">
+        <div class="review-card">
+          <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Customer review can go here — this is a placeholder awaiting real testimonials from the business owner."</p>
+          <div class="review-card__author">— Review Placeholder</div>
+        </div>
+        <div class="review-card">
+          <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Customer review can go here — this is a placeholder awaiting real testimonials from the business owner."</p>
+          <div class="review-card__author">— Review Placeholder</div>
+        </div>
+        <div class="review-card">
+          <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Customer review can go here — this is a placeholder awaiting real testimonials from the business owner."</p>
+          <div class="review-card__author">— Review Placeholder</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ESTIMATE FORM ===== -->
+  <section class="estimate section" id="estimate">
+    <div class="container">
+      <div class="estimate__inner">
+        <div class="estimate__text" data-animate>
+          <p class="section-label">Free Estimates</p>
+          <h2 class="section-title">Tell Us About Your Project</h2>
+          <p>Fill out the form and we'll get back to you to discuss your project. No obligation — just a straightforward conversation about what you need done.</p>
+          <div class="estimate__contact-options">
+            <a href="tel:7038142346" class="estimate__contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2z"/></svg>
+              703-814-2346
+            </a>
+            <a href="tel:7037956682" class="estimate__contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2z"/></svg>
+              703-795-6682 (Owner)
+            </a>
+            <a href="mailto:waynejohnscontractors@gmail.com" class="estimate__contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              waynejohnscontractors@gmail.com
+            </a>
+          </div>
+          <p class="estimate__hours">Office hours: Mon–Fri, 7am–9pm EST</p>
+        </div>
+
+        <form class="estimate__form" id="estimateForm" data-animate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Full Name *</label>
+              <input type="text" id="fname" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="fphone">Phone *</label>
+              <input type="tel" id="fphone" name="phone" placeholder="(703) 000-0000" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" name="email" placeholder="your@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="fcity">City / Neighborhood</label>
+              <input type="text" id="fcity" name="city" placeholder="e.g. Alexandria, Fairfax, Burke" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fservice">Service Needed</label>
+            <select id="fservice" name="service">
+              <option value="">Select a service...</option>
+              <option>Interior Painting</option>
+              <option>Exterior Painting</option>
+              <option>Kitchen Remodeling</option>
+              <option>Bathroom Remodeling</option>
+              <option>Basement Remodeling</option>
+              <option>Drywall / Ceiling Repair</option>
+              <option>Water Damage Repair</option>
+              <option>Deck / Fence Repair</option>
+              <option>Carpentry</option>
+              <option>Pressure Washing</option>
+              <option>Mold Testing / Remediation</option>
+              <option>Lead-Safe Renovation (RRP)</option>
+              <option>Flooring Installation</option>
+              <option>Multiple Services</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fdetails">Project Details</label>
+            <textarea id="fdetails" name="details" rows="4" placeholder="Tell us about your project — what needs to be done, approximate size, timeline, any other details..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Preferred Contact Method</label>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="contact" value="phone" checked /> Phone call</label>
+              <label class="radio-label"><input type="radio" name="contact" value="text" /> Text message</label>
+              <label class="radio-label"><input type="radio" name="contact" value="email" /> Email</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--gold btn--full">Submit Estimate Request</button>
+          <p class="form-note">* This is a demo form. Wire up to your preferred backend before launch.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="cta-section">
+    <div class="container cta-section__inner">
+      <div data-animate>
+        <h2>Need Painting, Remodeling, or Home Repairs?</h2>
+        <p>Call today or request an estimate and tell us about your project.</p>
+      </div>
+      <div class="cta-section__actions" data-animate>
+        <a href="tel:7038142346" class="btn btn--gold">Call 703-814-2346</a>
+        <a href="#estimate" class="btn btn--outline-dark">Request an Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">W J Contractors</div>
+        <p>Licensed, insured, and bonded contractor serving Northern Virginia and surrounding suburbs.</p>
+        <p class="footer__lic">VA Class A Lic. #2705156375</p>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Painting</a></li>
+          <li><a href="#services">Kitchen &amp; Bath Remodeling</a></li>
+          <li><a href="#services">Basement Remodeling</a></li>
+          <li><a href="#services">Drywall &amp; Water Damage</a></li>
+          <li><a href="#services">Decks, Fences &amp; Carpentry</a></li>
+          <li><a href="#services">Pressure Washing</a></li>
+          <li><a href="#services">Mold Services</a></li>
+          <li><a href="#services">Lead-Safe Renovation</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-us">Why W J Contractors</a></li>
+          <li><a href="#gallery">Project Gallery</a></li>
+          <li><a href="#estimate">Request an Estimate</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:7038142346">703-814-2346</a></li>
+          <li><a href="tel:7037956682">703-795-6682 (Owner)</a></li>
+          <li><a href="mailto:waynejohnscontractors@gmail.com">waynejohnscontractors@gmail.com</a></li>
+          <li>Northern Virginia &amp; suburbs</li>
+          <li>Mon–Fri, 7am–9pm EST</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; 2026 W J Contractors. All rights reserved. Northern Virginia.</p>
+      <p class="footer__disclaimer">Demo redesign concept. Final content, photos, credentials, and licensing details should be verified by the business owner before publishing.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
