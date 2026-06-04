@@ -455,6 +455,15 @@ ul { list-style: none; }
 
 .demo-layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: start; }
 
+/* Live chat note */
+.chat-live-note {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--black); border: 1px solid rgba(201,168,76,0.2);
+  border-radius: var(--radius-md); padding: 20px 24px;
+  font-size: 0.9rem; color: rgba(255,255,255,0.75);
+}
+.chat-live-note .cwp-dot { flex-shrink: 0; }
+
 /* Chat Widget Placeholder */
 .chat-widget-placeholder {
   background: var(--black); border-radius: var(--radius-lg); overflow: hidden;
