@@ -130,6 +130,10 @@
               <label for="email">Email Address <span>*</span></label>
               <input type="email" id="email" name="Email" required placeholder="jane@yourbusiness.com" />
             </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="Phone Number" placeholder="(555) 000-0000" />
+            </div>
           </div>
 
           <div class="form-group">
@@ -147,8 +151,18 @@
             <textarea id="message" name="Message" required placeholder="Tell us about your business and what you're looking for. We're happy to answer questions about the platform, pricing, or how setup works."></textarea>
           </div>
 
-          <div class="form-consent">
-            By submitting this form, you agree to receive email communications regarding your inquiry.
+          <div class="form-consent-checkboxes">
+            <label class="consent-checkbox-label">
+              <input type="checkbox" name="consent_marketing_sms" value="yes" />
+              <span>I consent to receive marketing text messages, about special offers, discounts, and service updates, from Missed Calls to Cash at the phone number provided. Message frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</span>
+            </label>
+
+            <label class="consent-checkbox-label">
+              <input type="checkbox" name="consent_service_sms" value="yes" />
+              <span>I consent to receive non-marketing text messages from Missed Calls to Cash about customer care and service-related messages. Message frequency may vary, message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</span>
+            </label>
+
+            <p class="consent-privacy-note">Your information is protected. View our <a href="privacy-policy.html">Privacy Policy</a>.</p>
           </div>
 
           <button type="submit" class="form-submit">Send Message</button>
