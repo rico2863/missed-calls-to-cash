@@ -1,0 +1,3175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reyes Construction LLC | Home Improvement & Contractor Services | Maryland</title>
+  <meta name="description" content="Reyes Construction LLC is a licensed Maryland home improvement contractor serving Queenstown, the Eastern Shore, and surrounding areas. Decks, porches, remodeling, and more. MHIC 153887." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* =============================================
+       GLOBAL RESET & VARIABLES
+    ============================================= */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy:       #0d1b2a;
+      --navy-light: #1a2d42;
+      --charcoal:   #2c3e50;
+      --orange:     #e07b39;
+      --orange-dark:#c4621e;
+      --tan:        #f2ece3;
+      --white:      #ffffff;
+      --gray-light: #f5f5f5;
+      --gray-mid:   #8a9bb0;
+      --text-dark:  #1a1a1a;
+      --text-body:  #3a3a3a;
+      --radius:     8px;
+      --shadow:     0 4px 24px rgba(0,0,0,0.12);
+      --shadow-lg:  0 12px 48px rgba(0,0,0,0.18);
+      --transition: 0.25s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-body);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* =============================================
+       UTILITY CLASSES
+    ============================================= */
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-title.light { color: var(--white); }
+
+    .section-intro {
+      font-size: 1.08rem;
+      color: var(--text-body);
+      max-width: 640px;
+      line-height: 1.75;
+    }
+
+    .section-intro.light { color: rgba(255,255,255,0.82); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 30px;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: all var(--transition);
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+    }
+    .btn-primary:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(224,123,57,0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+    }
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    .btn-outline-orange {
+      background: transparent;
+      color: var(--orange);
+      border: 2px solid var(--orange);
+    }
+    .btn-outline-orange:hover {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    /* =============================================
+       TOPBAR (pre-header info bar)
+    ============================================= */
+    .topbar {
+      background: var(--navy);
+      padding: 9px 0;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .topbar a {
+      color: rgba(255,255,255,0.85);
+      transition: color var(--transition);
+    }
+    .topbar a:hover { color: var(--orange); }
+
+    .topbar-left, .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .topbar-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .topbar-icon {
+      width: 14px;
+      height: 14px;
+      opacity: 0.7;
+    }
+
+    .license-badge {
+      background: var(--orange);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.04em;
+    }
+
+    /* =============================================
+       NAVIGATION
+    ============================================= */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      gap: 24px;
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .nav-logo-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .nav-logo-tagline {
+      font-size: 0.7rem;
+      color: var(--gray-mid);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      letter-spacing: 0.02em;
+      transition: color var(--transition);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--orange);
+      transition: width var(--transition);
+    }
+    .nav-links a:hover { color: var(--orange); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-phone {
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--navy);
+      letter-spacing: 0.01em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-phone:hover { color: var(--orange); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--navy);
+      transition: all var(--transition);
+      border-radius: 2px;
+    }
+
+    /* Mobile nav */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--navy);
+      z-index: 2000;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      text-align: center;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.04em;
+    }
+    .mobile-menu a:hover { color: var(--orange); }
+    .mobile-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* =============================================
+       HERO SECTION
+    ============================================= */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* Video background */
+    .hero-video-wrap {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Overlay — darkens video so text reads clearly */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(13,27,42,0.70) 0%,
+        rgba(13,27,42,0.45) 60%,
+        rgba(13,27,42,0.35) 100%
+      );
+      z-index: 1;
+    }
+
+    /* Fallback gradient if video fails to load */
+    .hero-fallback {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--charcoal) 100%);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 120px 0 100px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      backdrop-filter: blur(8px);
+      color: var(--white);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: 40px;
+      margin-bottom: 24px;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--orange);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.85); }
+    }
+
+    .hero-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(2.4rem, 6vw, 4.4rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.08;
+      margin-bottom: 22px;
+      max-width: 760px;
+    }
+
+    .hero-title span { color: var(--orange); }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.18rem);
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      line-height: 1.75;
+      margin-bottom: 40px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 52px;
+    }
+
+    .hero-trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    .hero-trust-icon {
+      width: 20px;
+      height: 20px;
+      color: var(--orange);
+    }
+
+    /* =============================================
+       STATS STRIP
+    ============================================= */
+    .stats-strip {
+      background: var(--orange);
+      padding: 22px 0;
+    }
+
+    .stats-inner {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .stat-item {
+      text-align: center;
+      color: var(--white);
+    }
+
+    .stat-number {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      opacity: 0.88;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+    }
+
+    /* =============================================
+       ABOUT SECTION
+    ============================================= */
+    .about {
+      padding: 96px 0;
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .about-img-stack {
+      position: relative;
+    }
+
+    /* Placeholder visual for about image — replace with real photo */
+    .about-img-main {
+      width: 100%;
+      height: 420px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--charcoal) 100%);
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* REPLACE: swap this <div> with an <img src="about-photo.jpg"> of the team / job site */
+    .about-img-placeholder {
+      text-align: center;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.85rem;
+      padding: 24px;
+    }
+
+    .about-img-placeholder svg {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 12px;
+      opacity: 0.35;
+    }
+
+    .about-badge-card {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--white);
+      border-radius: 10px;
+      padding: 18px 22px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      min-width: 150px;
+    }
+
+    .about-badge-card .big-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--orange);
+      line-height: 1;
+    }
+
+    .about-badge-card .badge-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .about-text .section-intro {
+      margin-bottom: 28px;
+    }
+
+    .about-points {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .about-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.97rem;
+      color: var(--text-body);
+    }
+
+    .about-check {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .about-check svg {
+      width: 12px;
+      height: 12px;
+      color: white;
+    }
+
+    /* =============================================
+       SERVICES SECTION
+    ============================================= */
+    .services {
+      padding: 96px 0;
+      background: var(--gray-light);
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .services-header .section-intro {
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 32px 28px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      transition: all var(--transition);
+      border-top: 4px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent, rgba(224,123,57,0.03));
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-top-color: var(--orange);
+    }
+
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon-wrap {
+      width: 52px;
+      height: 52px;
+      background: rgba(224,123,57,0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .service-icon-wrap svg {
+      width: 26px;
+      height: 26px;
+      color: var(--orange);
+    }
+
+    .service-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .service-desc {
+      font-size: 0.92rem;
+      color: #555;
+      line-height: 1.65;
+    }
+
+    /* =============================================
+       GALLERY SECTION
+    ============================================= */
+    .gallery {
+      padding: 96px 0;
+      background: var(--navy);
+    }
+
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 16px;
+    }
+
+    .gallery-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 4/3;
+    }
+
+    /* REPLACE: Replace each .gallery-placeholder div with an <img src="project-photo.jpg"> */
+    /* Each card corresponds to one project photo from the Facebook page or job site */
+    .gallery-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 20px;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.35s ease;
+    }
+
+    .gallery-card:hover .gallery-placeholder { transform: scale(1.04); }
+
+    /* Individual card gradients — replace backgrounds with real project images */
+    .gc-1 { background: linear-gradient(160deg, #2c5364 0%, #203a43 50%, #0f2027 100%); }
+    .gc-2 { background: linear-gradient(160deg, #373b44 0%, #4286f4 100%); }
+    .gc-3 { background: linear-gradient(160deg, #4a3728 0%, #2c1a0e 100%); }
+    .gc-4 { background: linear-gradient(160deg, #1a472a 0%, #0d2414 100%); }
+    .gc-5 { background: linear-gradient(160deg, #44364a 0%, #1e1024 100%); }
+    .gc-6 { background: linear-gradient(160deg, #3a3a3a 0%, #1a1a1a 100%); }
+
+    /* Icon overlay for placeholder cards */
+    .gallery-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      width: 48px;
+      height: 48px;
+      opacity: 0.15;
+    }
+
+    .gallery-label-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px 18px 14px;
+      background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%);
+    }
+
+    .gallery-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.04em;
+    }
+
+    .gallery-label-sub {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 2px;
+    }
+
+    /* Large card spans 2 columns */
+    .gallery-card.wide {
+      grid-column: span 2;
+    }
+
+    .gallery-cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* =============================================
+       WHY CHOOSE SECTION
+    ============================================= */
+    .why {
+      padding: 96px 0;
+      background: var(--tan);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .why-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .why-point {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 24px 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: box-shadow var(--transition);
+    }
+    .why-point:hover { box-shadow: var(--shadow); }
+
+    .why-point-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .why-point-icon svg {
+      width: 20px;
+      height: 20px;
+      color: white;
+    }
+
+    .why-point-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--navy);
+    }
+
+    .why-point-desc {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .why-text { }
+
+    .why-review-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-top: 32px;
+      border-left: 4px solid var(--orange);
+    }
+
+    .stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 12px;
+    }
+    .stars svg {
+      width: 18px;
+      height: 18px;
+      fill: #f59e0b;
+      color: #f59e0b;
+    }
+
+    .review-text {
+      font-size: 0.97rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 14px;
+    }
+
+    .reviewer {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .reviewer span {
+      font-weight: 400;
+      color: var(--gray-mid);
+      margin-left: 6px;
+    }
+
+    .fb-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #1877f2;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-top: 12px;
+    }
+
+    /* =============================================
+       CONTACT / ESTIMATE SECTION
+    ============================================= */
+    .contact {
+      padding: 96px 0;
+      background: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-info { }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      background: rgba(224,123,57,0.12);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-icon svg {
+      width: 22px;
+      height: 22px;
+      color: var(--orange);
+    }
+
+    .contact-detail-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-mid);
+      margin-bottom: 4px;
+    }
+
+    .contact-detail-value {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .contact-detail-value a {
+      color: var(--navy);
+      transition: color var(--transition);
+    }
+    .contact-detail-value a:hover { color: var(--orange); }
+
+    .contact-license {
+      background: var(--gray-light);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 8px;
+      font-size: 0.88rem;
+      color: var(--charcoal);
+    }
+
+    .contact-license strong { color: var(--navy); }
+
+    /* ESTIMATE FORM */
+    .estimate-form {
+      background: var(--navy);
+      border-radius: 16px;
+      padding: 40px 36px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .estimate-form .section-title {
+      color: var(--white);
+      margin-bottom: 8px;
+      font-size: 1.6rem;
+    }
+
+    .estimate-form .form-sub {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.9rem;
+      margin-bottom: 28px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group.full { grid-column: 1 / -1; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      font-size: 0.97rem;
+      font-family: 'Inter', sans-serif;
+      transition: border-color var(--transition), background var(--transition);
+      outline: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255,255,255,0.3);
+    }
+
+    .form-group select option {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--orange);
+      background: rgba(255,255,255,0.12);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    .form-submit {
+      width: 100%;
+      padding: 16px;
+      margin-top: 8px;
+      font-size: 1.05rem;
+    }
+
+    .form-disclaimer {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      margin-top: 14px;
+    }
+
+    /* Form success message */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px 0;
+    }
+    .form-success svg {
+      width: 56px;
+      height: 56px;
+      color: #22c55e;
+      margin: 0 auto 16px;
+    }
+    .form-success p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1rem;
+    }
+    .form-success h3 {
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    /* =============================================
+       BOOKING CALENDAR SECTION
+    ============================================= */
+    .booking-section {
+      padding: 96px 0;
+      background: var(--tan);
+    }
+
+    .booking-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .booking-header .section-intro { margin: 0 auto; }
+
+    .booking-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .cal-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .cal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .cal-month {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .cal-nav {
+      display: flex;
+      gap: 8px;
+    }
+
+    .cal-nav button {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      background: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+      color: var(--charcoal);
+    }
+    .cal-nav button:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: white;
+    }
+
+    .cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+    }
+
+    .cal-day-label {
+      text-align: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--gray-mid);
+      text-transform: uppercase;
+      padding: 4px 0 8px;
+    }
+
+    .cal-day {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-body);
+      cursor: pointer;
+      transition: all var(--transition);
+      border: 1.5px solid transparent;
+    }
+
+    .cal-day:hover:not(.cal-empty):not(.cal-past) {
+      background: rgba(224,123,57,0.12);
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+
+    .cal-day.cal-today {
+      background: var(--navy);
+      color: white;
+      font-weight: 700;
+    }
+
+    .cal-day.cal-selected {
+      background: var(--orange);
+      color: white;
+      font-weight: 700;
+    }
+
+    .cal-day.cal-past {
+      color: #ccc;
+      cursor: default;
+    }
+
+    .cal-day.cal-empty { cursor: default; }
+
+    .cal-day.cal-booked {
+      background: #f1f5f9;
+      color: #aaa;
+      cursor: default;
+      text-decoration: line-through;
+    }
+
+    /* Time slots */
+    .time-slots {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+
+    .time-slots-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--gray-mid);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 12px;
+    }
+
+    .time-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .time-slot {
+      padding: 8px 4px;
+      text-align: center;
+      border-radius: 6px;
+      border: 1.5px solid #e2e8f0;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .time-slot:hover:not(.time-taken) {
+      border-color: var(--orange);
+      color: var(--orange);
+      background: rgba(224,123,57,0.06);
+    }
+
+    .time-slot.time-selected {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: white;
+    }
+
+    .time-slot.time-taken {
+      background: #f8f8f8;
+      color: #ccc;
+      cursor: default;
+      text-decoration: line-through;
+    }
+
+    /* Booking form panel */
+    .booking-form-panel {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .booking-summary {
+      background: var(--gray-light);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      font-size: 0.88rem;
+      color: var(--charcoal);
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .booking-summary svg { color: var(--orange); flex-shrink: 0; }
+
+    .booking-form-panel h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .booking-form-panel p.sub {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .bform-group {
+      margin-bottom: 14px;
+    }
+
+    .bform-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--charcoal);
+      margin-bottom: 5px;
+    }
+
+    .bform-group input,
+    .bform-group select {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      border: 1.5px solid #dde1e7;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-body);
+      outline: none;
+      transition: border-color var(--transition);
+    }
+
+    .bform-group input:focus,
+    .bform-group select:focus {
+      border-color: var(--orange);
+    }
+
+    .booking-submit {
+      width: 100%;
+      padding: 14px;
+      font-size: 1rem;
+      margin-top: 6px;
+    }
+
+    .booking-success {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .booking-success svg { width:48px;height:48px;color:#22c55e;margin:0 auto 12px; }
+    .booking-success h4 { font-family:'Oswald',sans-serif;font-size:1.2rem;color:var(--navy);margin-bottom:8px; }
+    .booking-success p { font-size:0.9rem;color:#555; }
+
+    @media (max-width: 768px) {
+      .booking-wrap { grid-template-columns: 1fr; }
+    }
+
+    /* =============================================
+       AI CHATBOT WIDGET (floating)
+    ============================================= */
+    .chat-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 1100;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 24px rgba(224,123,57,0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .chat-fab:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 32px rgba(224,123,57,0.65);
+    }
+    .chat-fab svg { width:28px;height:28px;color:white; }
+
+    .chat-fab-badge {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      width: 20px;
+      height: 20px;
+      background: #22c55e;
+      border-radius: 50%;
+      border: 2px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      font-weight: 800;
+      color: white;
+    }
+
+    .chat-window {
+      position: fixed;
+      bottom: 100px;
+      right: 28px;
+      z-index: 1100;
+      width: 360px;
+      max-height: 520px;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transform: scale(0.85) translateY(20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.34,1.56,0.64,1);
+      transform-origin: bottom right;
+    }
+
+    .chat-window.open {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .chat-win-header {
+      background: linear-gradient(135deg, var(--navy), var(--charcoal));
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .chat-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .chat-avatar svg { width:20px;height:20px;color:white; }
+
+    .chat-win-info { flex: 1; }
+    .chat-win-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: white;
+    }
+    .chat-win-status {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.65);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 2px;
+    }
+    .chat-win-status::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      flex-shrink: 0;
+    }
+
+    .chat-win-close {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.6);
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 4px;
+      line-height: 1;
+    }
+    .chat-win-close:hover { color: white; }
+
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: #f8f9fb;
+    }
+
+    .chat-msg {
+      display: flex;
+      gap: 8px;
+      align-items: flex-end;
+      max-width: 88%;
+    }
+
+    .chat-msg.bot { align-self: flex-start; }
+    .chat-msg.user { align-self: flex-end; flex-direction: row-reverse; }
+
+    .chat-msg-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .chat-msg-avatar svg { width:13px;height:13px;color:white; }
+
+    .chat-msg-bubble {
+      padding: 10px 14px;
+      border-radius: 16px;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .chat-msg.bot .chat-msg-bubble {
+      background: white;
+      color: var(--text-body);
+      border-bottom-left-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    }
+
+    .chat-msg.user .chat-msg-bubble {
+      background: var(--orange);
+      color: white;
+      border-bottom-right-radius: 4px;
+    }
+
+    /* Typing indicator */
+    .chat-typing {
+      display: flex;
+      gap: 8px;
+      align-items: flex-end;
+      align-self: flex-start;
+    }
+    .chat-typing .chat-msg-avatar { }
+    .typing-dots {
+      background: white;
+      border-radius: 16px;
+      border-bottom-left-radius: 4px;
+      padding: 12px 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+    .typing-dots span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gray-mid);
+      animation: typingBounce 1.2s infinite;
+    }
+    .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typingBounce {
+      0%,60%,100% { transform: translateY(0); opacity: 0.4; }
+      30% { transform: translateY(-6px); opacity: 1; }
+    }
+
+    /* Quick replies */
+    .chat-quick-replies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-self: flex-start;
+      padding-left: 36px;
+    }
+    .chat-qr {
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1.5px solid var(--orange);
+      background: white;
+      color: var(--orange);
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .chat-qr:hover {
+      background: var(--orange);
+      color: white;
+    }
+
+    .chat-input-row {
+      padding: 12px 14px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      border-top: 1px solid #eee;
+      background: white;
+    }
+
+    .chat-input-field {
+      flex: 1;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 10px 16px;
+      font-size: 0.88rem;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .chat-input-field:focus { border-color: var(--orange); }
+
+    .chat-send {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--orange);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background var(--transition);
+    }
+    .chat-send:hover { background: var(--orange-dark); }
+    .chat-send svg { width:16px;height:16px;color:white; }
+
+    @media (max-width: 480px) {
+      .chat-window { width: calc(100vw - 24px); right: 12px; bottom: 80px; }
+      .chat-fab { bottom: 80px; right: 16px; }
+    }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    footer {
+      background: var(--navy);
+      padding: 60px 0 0;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand .nav-logo-name {
+      color: var(--white);
+      font-size: 1.4rem;
+      margin-bottom: 4px;
+    }
+    .footer-brand .tagline {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 18px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .footer-brand p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      max-width: 320px;
+    }
+
+    .footer-license {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.65);
+    }
+
+    .footer-col h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--orange); }
+
+    .footer-contact-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 12px;
+    }
+    .footer-contact-row svg {
+      width: 15px;
+      height: 15px;
+      color: var(--orange);
+      flex-shrink: 0;
+    }
+    .footer-contact-row a {
+      color: rgba(255,255,255,0.65);
+      transition: color var(--transition);
+    }
+    .footer-contact-row a:hover { color: var(--orange); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* =============================================
+       STICKY MOBILE CALL BUTTON
+    ============================================= */
+    .sticky-call {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: var(--orange);
+      color: var(--white);
+      text-align: center;
+      padding: 16px 20px;
+      font-size: 1rem;
+      font-weight: 800;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .sticky-call svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* =============================================
+       SCROLL-REVEAL ANIMATION
+    ============================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* =============================================
+       RESPONSIVE
+    ============================================= */
+    @media (max-width: 960px) {
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-img-stack { max-width: 520px; }
+      .why-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-cta .btn { display: none; }
+      .hamburger { display: flex; }
+
+      .hero-content { padding: 80px 0 80px; }
+      .hero-title { font-size: 2.2rem; }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .gallery-card.wide { grid-column: span 2; }
+
+      .why-points { grid-template-columns: 1fr; }
+
+      .form-row { grid-template-columns: 1fr; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+
+      .sticky-call { display: flex; }
+
+      /* Add bottom padding so sticky call doesn't cover content */
+      footer { padding-bottom: 64px; }
+    }
+
+    @media (max-width: 540px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-card.wide { grid-column: span 1; }
+      .stats-inner { gap: 24px; }
+      .topbar-right { display: none; }
+      .hero-buttons { flex-direction: column; }
+      .hero-buttons .btn { width: 100%; justify-content: center; }
+      .estimate-form { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================================================
+       TOPBAR
+  ================================================ -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <div class="topbar-left">
+          <div class="topbar-item">
+            <svg class="topbar-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            Queenstown, MD &amp; Eastern Shore
+          </div>
+          <div class="topbar-item">
+            <svg class="topbar-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Mon–Sat: 7:00 AM – 6:00 PM
+          </div>
+        </div>
+        <div class="topbar-right">
+          <span class="license-badge">MHIC 153887</span>
+          <a href="tel:4107258430" class="topbar-item">
+            <svg class="topbar-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            (410) 725-8430
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================
+       NAVIGATION
+  ================================================ -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">
+          <span class="nav-logo-name">Reyes Construction LLC</span>
+          <span class="nav-logo-tagline">Licensed Maryland Contractor</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Projects</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#booking">Book</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="tel:4107258430" class="nav-phone">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            (410) 725-8430
+          </a>
+          <a href="#contact" class="btn btn-primary">Free Estimate</a>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#gallery" class="mobile-link">Projects</a>
+    <a href="#why" class="mobile-link">Why Us</a>
+    <a href="#booking" class="mobile-link">Book Estimate</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="tel:4107258430" class="btn btn-primary" style="font-size:1.1rem;padding:16px 36px;">
+      Call (410) 725-8430
+    </a>
+  </div>
+
+  <!-- ================================================
+       HERO SECTION
+  ================================================ -->
+  <section class="hero" id="hero">
+
+    <!-- Fallback background if video cannot load -->
+    <div class="hero-fallback"></div>
+
+    <!-- VIDEO BACKGROUND
+         Source: C:\Users\Trader\OneDrive\Documents\MissedCallsToCash\Contractors\ReyesConstructionLLC\LegacyHomeServices.mp4
+         To deploy: copy or reference the video file relative to this HTML file.
+         Update the <source src=""> path below to match your server/hosting setup. -->
+    <div class="hero-video-wrap">
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        aria-hidden="true"
+        id="heroVideo"
+      >
+        <!-- VIDEO SETUP:
+             Copy LegacyHomeServices.mp4 into the same folder as index.html and rename it hero.mp4,
+             OR update the src below to the correct relative path after deploying.
+             Original file: C:\Users\Trader\OneDrive\Documents\MissedCallsToCash\Contractors\ReyesConstructionLLC\LegacyHomeServices.mp4
+        -->
+        <source src="hero.mp4" type="video/mp4" />
+        <!-- If video is missing, the gradient fallback div remains visible -->
+      </video>
+    </div>
+
+    <!-- Overlay darkens video for text readability -->
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Licensed Maryland Contractor · MHIC 153887
+        </div>
+
+        <h1 class="hero-title">
+          Reliable Construction &amp;<br><span>Home Improvement</span><br>Services in Maryland
+        </h1>
+
+        <p class="hero-sub">
+          Reyes Construction LLC helps homeowners with quality repairs, remodeling, decks, porches, and home improvement projects built with care — serving Queenstown, the Eastern Shore, and surrounding Maryland communities.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="tel:4107258430" class="btn btn-primary" style="font-size:1.05rem;padding:16px 32px;">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            Call Now: (410) 725-8430
+          </a>
+          <a href="#contact" class="btn btn-outline" style="font-size:1.05rem;padding:16px 32px;">
+            Request a Free Estimate
+          </a>
+        </div>
+
+        <div class="hero-trust-row">
+          <div class="hero-trust-item">
+            <svg class="hero-trust-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            MHIC Licensed &amp; Insured
+          </div>
+          <div class="hero-trust-item">
+            <svg class="hero-trust-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            Serving Eastern Shore, MD
+          </div>
+          <div class="hero-trust-item">
+            <svg class="hero-trust-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+            </svg>
+            100% Facebook Recommended
+          </div>
+          <div class="hero-trust-item">
+            <svg class="hero-trust-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Free Estimates
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       STATS STRIP
+  ================================================ -->
+  <div class="stats-strip">
+    <div class="container">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <span class="stat-number">MHIC</span>
+          <span class="stat-label">153887 — Licensed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Facebook Recommended</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">MD</span>
+          <span class="stat-label">Eastern Shore Based</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">Free</span>
+          <span class="stat-label">Estimates Always</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================
+       ABOUT SECTION
+  ================================================ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-img-stack reveal">
+          <!-- REPLACE: Replace this placeholder div with a real team or job-site photo.
+               Example: <img src="images/reyes-team.jpg" alt="Reyes Construction team on a job site" style="width:100%;height:420px;object-fit:cover;border-radius:12px;" />
+          -->
+          <div class="about-img-main">
+            <div class="about-img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                <polyline stroke-linecap="round" stroke-linejoin="round" points="9 22 9 12 15 12 15 22"/>
+              </svg>
+              <p>Team / Job Site Photo<br><small>Replace with real image</small></p>
+            </div>
+          </div>
+
+          <div class="about-badge-card">
+            <span class="big-num">MD</span>
+            <span class="badge-label">Licensed &amp;<br>Local</span>
+          </div>
+        </div>
+
+        <div class="about-text reveal">
+          <p class="section-label">About Reyes Construction LLC</p>
+          <h2 class="section-title">Built on Trust. Focused on Your Home.</h2>
+
+          <p class="section-intro">
+            Reyes Construction LLC is a local home improvement contractor based in Queenstown, Maryland. We serve homeowners across the Eastern Shore and surrounding areas with hands-on construction, repair, and remodeling services done the right way.
+          </p>
+
+          <div class="about-points">
+            <div class="about-point">
+              <div class="about-check">
+                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <span>We focus on dependable workmanship on every job, no matter the size.</span>
+            </div>
+            <div class="about-point">
+              <div class="about-check">
+                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <span>Clear communication from the first call through project completion.</span>
+            </div>
+            <div class="about-point">
+              <div class="about-check">
+                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <span>Licensed under Maryland's Home Improvement Commission — MHIC 153887.</span>
+            </div>
+            <div class="about-point">
+              <div class="about-check">
+                <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <span>We treat every home as if it were our own — with care and attention to detail.</span>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+            <a href="#contact" class="btn btn-primary">Get a Free Estimate</a>
+            <a href="tel:4107258430" class="btn btn-outline-orange">Call (410) 725-8430</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       SERVICES SECTION
+  ================================================ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-header reveal">
+        <p class="section-label">What We Do</p>
+        <h2 class="section-title">Home Improvement Services You Can Count On</h2>
+        <p class="section-intro">
+          From decks and porches to interior remodeling and general repairs, Reyes Construction handles a wide range of residential projects for homeowners in Maryland.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Service Card 1 -->
+        <div class="service-card reveal">
+          <div class="service-icon-wrap">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline stroke-linecap="round" stroke-linejoin="round" points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="service-title">Home Improvement</div>
+          <p class="service-desc">General home improvement services for Maryland homeowners. We help you identify what needs attention and get it done properly the first time.</p>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card reveal">
+          <div class="service-icon-wrap">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="4" rx="1"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 7v12M19 7v12M5 19h14"/>
+              <line x1="9" y1="7" x2="9" y2="19" stroke-linecap="round"/>
+              <line x1="15" y1="7" x2="15" y2="19" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="service-title">Deck Repairs &amp; Rebuilds</div>
+          <p class="service-desc">Worn-out or unsafe deck? We repair, restore, or rebuild wood and composite decks to make them safe, solid, and looking great again.</p>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card reveal">
+          <div class="service-icon-wrap">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v4H4zM4 8v12M20 8v12M4 20h16"/>
+              <line x1="9" y1="8" x2="9" y2="20" stroke-linecap="round"/>
+              <line x1="15" y1="8" x2="15" y2="20" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="service-title">Porch Repairs</div>
+          <p class="service-desc">We repair rotted boards, damaged railings, worn steps, and structural issues on porches of all sizes — restoring both function and curb appeal.</p>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="service-card reveal">
+          <div class="service-icon-wrap">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2 17l10 5 10-5"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="service-title">Exterior Repairs</div>
+          <p class="service-desc">Siding damage, fascia, trim, steps, and exterior wood repairs. We protect your home's exterior from Maryland's weather before problems get worse.</p>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div class="service-card reveal">
+          <div class="service-icon-wrap">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <div class="service-title">Interior Remodeling</div>
+          <p class="service-desc">Kitchen updates, bathroom renovations, room modifications, and interior improvements that add real value and comfort to your living space.</p>
+        </div>
+
+        <!-- Service Card 6 -->
+        <div class="service-card reveal">
+          <div class="service-icon-wrap">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <div class="service-title">Carpentry</div>
+          <p class="service-desc">Custom woodwork, trim installation, framing, doors, windows, and finish carpentry that brings craftsmanship and detail to your home.</p>
+        </div>
+
+        <!-- Service Card 7 -->
+        <div class="service-card reveal">
+          <div class="service-icon-wrap">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <polygon stroke-linecap="round" stroke-linejoin="round" points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline stroke-linecap="round" stroke-linejoin="round" points="2 17 12 22 22 17"/>
+              <polyline stroke-linecap="round" stroke-linejoin="round" points="2 12 12 17 22 12"/>
+            </svg>
+          </div>
+          <div class="service-title">General Construction</div>
+          <p class="service-desc">Additions, structural work, and general construction projects for residential properties. We tackle both large and small-scale builds.</p>
+        </div>
+
+        <!-- Service Card 8 -->
+        <div class="service-card reveal">
+          <div class="service-icon-wrap">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+            </svg>
+          </div>
+          <div class="service-title">Property Repairs</div>
+          <p class="service-desc">From small fixes to larger repair projects, we help maintain and protect your property's value with honest assessments and reliable workmanship.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       GALLERY / PROJECTS SECTION
+  ================================================ -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="gallery-header reveal">
+        <p class="section-label" style="color:var(--orange);">Our Work</p>
+        <h2 class="section-title light">Recent Projects</h2>
+        <p class="section-intro light" style="margin:0 auto;">
+          We take pride in the work we do for homeowners across Maryland. Every project gets the same level of care and attention — no shortcuts.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <!-- REPLACE INSTRUCTIONS:
+             Each .gallery-placeholder div below is a placeholder card.
+             To swap in a real project photo:
+             1. Place your image file in an /images/ folder next to this HTML file
+             2. Replace the <div class="gallery-placeholder gc-X"> with:
+                <img src="images/your-photo.jpg" alt="Project description" style="width:100%;height:100%;object-fit:cover;" />
+             3. Keep the .gallery-label-bar overlay inside .gallery-card for captions
+        -->
+
+        <!-- Card 1 — Wide (spans 2 columns) — Deck Project -->
+        <div class="gallery-card wide reveal">
+          <div class="gallery-placeholder gc-1">
+            <svg class="gallery-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+              <rect x="3" y="3" width="18" height="4" rx="1"/>
+              <path d="M5 7v12M19 7v12M5 19h14"/>
+            </svg>
+          </div>
+          <div class="gallery-label-bar">
+            <div class="gallery-label">Deck Repair &amp; Rebuild</div>
+            <div class="gallery-label-sub">Queenstown, MD</div>
+          </div>
+        </div>
+
+        <!-- Card 2 — Porch Restoration -->
+        <div class="gallery-card reveal">
+          <div class="gallery-placeholder gc-2">
+            <svg class="gallery-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <div class="gallery-label-bar">
+            <div class="gallery-label">Porch Restoration</div>
+            <div class="gallery-label-sub">Eastern Shore, MD</div>
+          </div>
+        </div>
+
+        <!-- Card 3 — Exterior Work -->
+        <div class="gallery-card reveal">
+          <div class="gallery-placeholder gc-3">
+            <svg class="gallery-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="gallery-label-bar">
+            <div class="gallery-label">Exterior Improvements</div>
+            <div class="gallery-label-sub">Maryland</div>
+          </div>
+        </div>
+
+        <!-- Card 4 — Interior Remodeling -->
+        <div class="gallery-card reveal">
+          <div class="gallery-placeholder gc-4">
+            <svg class="gallery-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+              <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3"/>
+            </svg>
+          </div>
+          <div class="gallery-label-bar">
+            <div class="gallery-label">Interior Remodeling</div>
+            <div class="gallery-label-sub">Queenstown, MD</div>
+          </div>
+        </div>
+
+        <!-- Card 5 — Carpentry -->
+        <div class="gallery-card reveal">
+          <div class="gallery-placeholder gc-5">
+            <svg class="gallery-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+              <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <div class="gallery-label-bar">
+            <div class="gallery-label">Custom Carpentry</div>
+            <div class="gallery-label-sub">Eastern Shore, MD</div>
+          </div>
+        </div>
+
+        <!-- Card 6 — Property Repairs -->
+        <div class="gallery-card reveal">
+          <div class="gallery-placeholder gc-6">
+            <svg class="gallery-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+              <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+              <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+            </svg>
+          </div>
+          <div class="gallery-label-bar">
+            <div class="gallery-label">Property Repairs</div>
+            <div class="gallery-label-sub">Maryland</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="gallery-cta reveal">
+        <p style="color:rgba(255,255,255,0.6);margin-bottom:18px;font-size:0.95rem;">
+          Every project is completed with care. Call us to discuss your project.
+        </p>
+        <a href="tel:4107258430" class="btn btn-primary">Call (410) 725-8430</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       WHY CHOOSE REYES CONSTRUCTION
+  ================================================ -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="why-grid">
+
+        <div class="why-text reveal">
+          <p class="section-label">Why Homeowners Choose Us</p>
+          <h2 class="section-title">The Contractor That Shows Up and Gets It Done</h2>
+          <p class="section-intro" style="margin-bottom:24px;">
+            Reyes Construction LLC has built a reputation in the Maryland community for dependable work, fair pricing, and treating every homeowner's property with respect. We're not a big faceless company — we're your local contractor.
+          </p>
+
+          <!-- Review Card -->
+          <div class="why-review-card">
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="review-text">"Reyes Construction did an excellent job on our deck. They were on time, professional, and the quality was outstanding. We would absolutely recommend them to anyone looking for a reliable contractor in the area."</p>
+            <div class="reviewer">Maryland Homeowner <span>via Facebook</span></div>
+            <div class="fb-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              100% Recommended on Facebook
+            </div>
+          </div>
+        </div>
+
+        <div class="why-points reveal">
+
+          <div class="why-point">
+            <div class="why-point-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <div class="why-point-title">MHIC Licensed</div>
+            <div class="why-point-desc">Licensed under Maryland's Home Improvement Commission. License #153887 — protecting you and your home.</div>
+          </div>
+
+          <div class="why-point">
+            <div class="why-point-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div class="why-point-title">Locally Based</div>
+            <div class="why-point-desc">Based in Queenstown, MD — we know the Eastern Shore and treat our neighbors' homes with care.</div>
+          </div>
+
+          <div class="why-point">
+            <div class="why-point-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+              </svg>
+            </div>
+            <div class="why-point-title">Clear Communication</div>
+            <div class="why-point-desc">We explain what needs to be done, give you a clear estimate, and keep you informed from start to finish.</div>
+          </div>
+
+          <div class="why-point">
+            <div class="why-point-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="why-point-title">Free Estimates</div>
+            <div class="why-point-desc">No pressure, no obligation. We'll come out, assess the project, and give you a straight estimate.</div>
+          </div>
+
+          <div class="why-point">
+            <div class="why-point-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <div class="why-point-title">Quality Workmanship</div>
+            <div class="why-point-desc">We take pride in every project. The work should last — and so should our relationship with your household.</div>
+          </div>
+
+          <div class="why-point">
+            <div class="why-point-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+              </svg>
+            </div>
+            <div class="why-point-title">Facebook Recommended</div>
+            <div class="why-point-desc">100% recommended on Facebook by real homeowners in the Maryland community.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CONTACT / ESTIMATE SECTION
+  ================================================ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:56px;" class="reveal">
+        <p class="section-label">Get in Touch</p>
+        <h2 class="section-title">Request Your Free Estimate Today</h2>
+        <p class="section-intro" style="margin:0 auto;">
+          Ready to get started? Call us directly or fill out the form below and we'll get back to you promptly to discuss your project.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info reveal">
+
+          <div class="contact-detail">
+            <div class="contact-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-detail-label">Phone</div>
+              <div class="contact-detail-value">
+                <a href="tel:4107258430">(410) 725-8430</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-detail-label">Email</div>
+              <div class="contact-detail-value">
+                <a href="mailto:reyesconstructionllc4@gmail.com">reyesconstructionllc4@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-detail-label">Location</div>
+              <div class="contact-detail-value">303 Steamboat Ave<br>Queenstown, MD 21658</div>
+            </div>
+          </div>
+
+          <div class="contact-license">
+            <strong>Maryland Home Improvement License</strong><br>
+            MHIC #153887 — Licensed by the Maryland Home Improvement Commission
+          </div>
+
+          <div style="margin-top:28px;">
+            <p style="font-size:0.88rem;color:#666;margin-bottom:14px;font-weight:600;">Service Areas Include:</p>
+            <p style="font-size:0.88rem;color:#555;line-height:1.8;">
+              Queenstown · Centreville · Chestertown · Chester · Stevensville · Kent Island · Grasonville · Easton · Denton · Queen Anne's County · Kent County · Talbot County · surrounding Eastern Shore communities
+            </p>
+          </div>
+        </div>
+
+        <!-- ESTIMATE FORM
+             BACKEND INTEGRATION NOTE:
+             Connect this form to your preferred backend or service:
+             - Option A: Formspree (https://formspree.io) — simple, add action="https://formspree.io/f/YOUR_ID"
+             - Option B: Netlify Forms — add netlify attribute to <form>
+             - Option C: EmailJS — initialize in JS section below
+             - Option D: Custom server endpoint
+             The JS below shows a stub success state for demo purposes.
+        -->
+        <div class="estimate-form reveal">
+          <h3 class="section-title">Get a Free Estimate</h3>
+          <p class="form-sub">Fill out the form and we'll be in touch shortly.</p>
+
+          <form id="estimateForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Your Name *</label>
+                <input type="text" id="fname" name="name" placeholder="John Smith" required />
+              </div>
+              <div class="form-group">
+                <label for="fphone">Phone Number *</label>
+                <input type="tel" id="fphone" name="phone" placeholder="(410) 555-0100" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="femail">Email Address</label>
+              <input type="email" id="femail" name="email" placeholder="you@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="ftype">Project Type *</label>
+              <select id="ftype" name="project_type" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option value="Home Improvement">Home Improvement</option>
+                <option value="Deck Repair or Rebuild">Deck Repair or Rebuild</option>
+                <option value="Porch Repair">Porch Repair</option>
+                <option value="Exterior Repairs">Exterior Repairs</option>
+                <option value="Interior Remodeling">Interior Remodeling</option>
+                <option value="Carpentry">Carpentry</option>
+                <option value="General Construction">General Construction</option>
+                <option value="Property Repairs">Property Repairs</option>
+                <option value="Other">Other / Not Sure</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="fdetails">Project Details</label>
+              <textarea id="fdetails" name="details" placeholder="Tell us a little about your project — what needs to be done, approximate size, timeline, etc."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              Send My Free Estimate Request
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+            <p class="form-disclaimer">We respect your privacy. Your information is never sold or shared.</p>
+          </form>
+
+          <!-- Success state (shown after submit) -->
+          <div class="form-success" id="formSuccess">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <h3>Request Received!</h3>
+            <p>Thank you for reaching out to Reyes Construction LLC. We'll be in touch shortly to discuss your project.<br><br>
+            Or call us directly at <a href="tel:4107258430" style="color:var(--orange);font-weight:700;">(410) 725-8430</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       BOOKING CALENDAR SECTION
+  ================================================ -->
+  <section class="booking-section" id="booking">
+    <div class="container">
+      <div class="booking-header reveal">
+        <p class="section-label">Schedule a Visit</p>
+        <h2 class="section-title">Book a Free On-Site Estimate</h2>
+        <p class="section-intro">Pick a date and time that works for you. We'll come out, take a look, and give you a straight estimate — no pressure, no obligation.</p>
+      </div>
+
+      <div class="booking-wrap reveal">
+
+        <!-- Calendar -->
+        <div class="cal-card">
+          <div class="cal-header">
+            <span class="cal-month" id="calMonthLabel"></span>
+            <div class="cal-nav">
+              <button id="calPrev" aria-label="Previous month">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <button id="calNext" aria-label="Next month">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="cal-grid" id="calGrid"></div>
+
+          <div class="time-slots" id="timeSlots" style="display:none;">
+            <div class="time-slots-label">Available Times</div>
+            <div class="time-grid" id="timeGrid"></div>
+          </div>
+        </div>
+
+        <!-- Booking form -->
+        <div class="booking-form-panel">
+          <h3>Your Information</h3>
+          <p class="sub">We'll confirm your appointment by phone or email.</p>
+
+          <div class="booking-summary" id="bookingSummary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            <span id="bookingSummaryText">Select a date and time on the calendar</span>
+          </div>
+
+          <form id="bookingForm">
+            <div class="bform-group">
+              <label>Your Name *</label>
+              <input type="text" id="bName" placeholder="John Smith" required />
+            </div>
+            <div class="bform-group">
+              <label>Phone Number *</label>
+              <input type="tel" id="bPhone" placeholder="(410) 555-0100" required />
+            </div>
+            <div class="bform-group">
+              <label>Email Address</label>
+              <input type="email" id="bEmail" placeholder="you@example.com" />
+            </div>
+            <div class="bform-group">
+              <label>Project Type *</label>
+              <select id="bType" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option>Deck Repair or Rebuild</option>
+                <option>Porch Repair</option>
+                <option>Home Improvement</option>
+                <option>Exterior Repairs</option>
+                <option>Interior Remodeling</option>
+                <option>Carpentry</option>
+                <option>General Construction</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary booking-submit">
+              Confirm Appointment
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </form>
+
+          <div class="booking-success" id="bookingSuccess">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <h4>Appointment Requested!</h4>
+            <p id="bookingSuccessMsg">We'll call to confirm your visit shortly.<br>Or reach us directly at <a href="tel:4107258430" style="color:var(--orange);font-weight:700;">(410) 725-8430</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FOOTER
+  ================================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="nav-logo-name">Reyes Construction LLC</div>
+          <div class="tagline">Licensed Maryland Contractor</div>
+          <p>
+            Serving Queenstown, the Eastern Shore, and surrounding Maryland communities with quality home improvement, repairs, and remodeling work you can trust.
+          </p>
+          <div class="footer-license">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            MHIC #153887 — Maryland Licensed
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Home Improvement</a></li>
+            <li><a href="#services">Deck Repairs &amp; Rebuilds</a></li>
+            <li><a href="#services">Porch Repairs</a></li>
+            <li><a href="#services">Exterior Repairs</a></li>
+            <li><a href="#services">Interior Remodeling</a></li>
+            <li><a href="#services">Carpentry</a></li>
+            <li><a href="#services">General Construction</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-row">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <a href="tel:4107258430">(410) 725-8430</a>
+          </div>
+          <div class="footer-contact-row">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <a href="mailto:reyesconstructionllc4@gmail.com">reyesconstructionllc4@gmail.com</a>
+          </div>
+          <div class="footer-contact-row">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            Queenstown, MD 21658
+          </div>
+          <div style="margin-top:18px;">
+            <a href="#contact" class="btn btn-primary" style="font-size:0.88rem;padding:10px 20px;">Free Estimate</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2024 Reyes Construction LLC. All rights reserved. | Queenstown, MD</span>
+        <span>MHIC License #153887 | Maryland Licensed Home Improvement Contractor</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================================
+       AI CHATBOT WIDGET
+  ================================================ -->
+  <button class="chat-fab" id="chatFab" aria-label="Open chat">
+    <svg id="chatFabIcon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+    </svg>
+    <span class="chat-fab-badge" id="chatBadge">1</span>
+  </button>
+
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-win-header">
+      <div class="chat-avatar">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+        </svg>
+      </div>
+      <div class="chat-win-info">
+        <div class="chat-win-name">Reyes Construction</div>
+        <div class="chat-win-status">Online — typically replies in minutes</div>
+      </div>
+      <button class="chat-win-close" id="chatClose" aria-label="Close chat">✕</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages"></div>
+
+    <div class="chat-input-row">
+      <input class="chat-input-field" id="chatInput" type="text" placeholder="Ask about your project..." autocomplete="off" />
+      <button class="chat-send" id="chatSendBtn" aria-label="Send">
+        <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================================================
+       STICKY MOBILE CALL BUTTON
+  ================================================ -->
+  <a href="tel:4107258430" class="sticky-call" aria-label="Call Reyes Construction">
+    <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+    </svg>
+    Call Reyes Construction: (410) 725-8430
+  </a>
+
+  <!-- ================================================
+       JAVASCRIPT
+  ================================================ -->
+  <script>
+    // ── Mobile menu ──────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    mobileClose.addEventListener('click', closeMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+    // ── Scroll-reveal ─────────────────────────────────
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const delay = entry.target.closest('.services-grid, .gallery-grid, .why-points')
+            ? Array.from(entry.target.parentElement.children).indexOf(entry.target) * 80 : 0;
+          setTimeout(() => entry.target.classList.add('visible'), delay);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ── Estimate form ─────────────────────────────────
+    document.getElementById('estimateForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('fname').value.trim();
+      const phone = document.getElementById('fphone').value.trim();
+      const type = document.getElementById('ftype').value;
+      if (!name || !phone || !type) { alert('Please fill in your name, phone number, and project type.'); return; }
+      // REPLACE: wire up Formspree / Netlify Forms / EmailJS here
+      document.getElementById('estimateForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    });
+
+    // ── Smooth scroll ─────────────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 76, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ── Nav scroll shadow ─────────────────────────────
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      nav.style.boxShadow = window.scrollY > 30 ? '0 4px 20px rgba(0,0,0,0.12)' : '0 2px 12px rgba(0,0,0,0.06)';
+    });
+
+    // ════════════════════════════════════════════════
+    //  BOOKING CALENDAR
+    // ════════════════════════════════════════════════
+    const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+    // Fake "booked" days — a handful per month so it looks real
+    const BOOKED_DAYS = [3, 8, 14, 19, 22];
+    const TIMES = ['8:00 AM','9:00 AM','10:00 AM','11:00 AM','1:00 PM','2:00 PM','3:00 PM','4:00 PM'];
+    const TAKEN_TIMES = ['9:00 AM', '2:00 PM']; // always look partially booked
+
+    let calDate = new Date();
+    calDate.setDate(1);
+    let selectedDate = null;
+    let selectedTime = null;
+
+    function renderCalendar() {
+      const now = new Date();
+      const year = calDate.getFullYear();
+      const month = calDate.getMonth();
+      document.getElementById('calMonthLabel').textContent = MONTHS[month] + ' ' + year;
+
+      const grid = document.getElementById('calGrid');
+      grid.innerHTML = '';
+
+      // Day-of-week headers
+      DAYS.forEach(d => {
+        const el = document.createElement('div');
+        el.className = 'cal-day-label';
+        el.textContent = d;
+        grid.appendChild(el);
+      });
+
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const today = new Date();
+      today.setHours(0,0,0,0);
+
+      // Empty cells before first day
+      for (let i = 0; i < firstDay; i++) {
+        const el = document.createElement('div');
+        el.className = 'cal-day cal-empty';
+        grid.appendChild(el);
+      }
+
+      for (let d = 1; d <= daysInMonth; d++) {
+        const el = document.createElement('div');
+        const thisDate = new Date(year, month, d);
+        thisDate.setHours(0,0,0,0);
+        const dayOfWeek = thisDate.getDay();
+        const isPast = thisDate < today;
+        const isSunday = dayOfWeek === 0;
+        const isToday = thisDate.getTime() === today.getTime();
+        const isBooked = BOOKED_DAYS.includes(d) && !isPast;
+        const isSelected = selectedDate && thisDate.getTime() === selectedDate.getTime();
+
+        el.className = 'cal-day';
+        el.textContent = d;
+
+        if (isPast || isSunday) {
+          el.classList.add('cal-past');
+        } else if (isBooked) {
+          el.classList.add('cal-booked');
+        } else if (isSelected) {
+          el.classList.add('cal-selected');
+        } else if (isToday) {
+          el.classList.add('cal-today');
+        } else {
+          el.addEventListener('click', () => selectDate(new Date(year, month, d)));
+        }
+
+        grid.appendChild(el);
+      }
+    }
+
+    function selectDate(date) {
+      selectedDate = date;
+      selectedTime = null;
+      renderCalendar();
+
+      const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      const label = dayNames[date.getDay()] + ', ' + MONTHS[date.getMonth()] + ' ' + date.getDate();
+
+      const tsEl = document.getElementById('timeSlots');
+      tsEl.style.display = 'block';
+      const tg = document.getElementById('timeGrid');
+      tg.innerHTML = '';
+      TIMES.forEach(t => {
+        const btn = document.createElement('div');
+        btn.className = 'time-slot' + (TAKEN_TIMES.includes(t) ? ' time-taken' : '');
+        btn.textContent = t;
+        if (!TAKEN_TIMES.includes(t)) {
+          btn.addEventListener('click', () => selectTime(t, label));
+        }
+        tg.appendChild(btn);
+      });
+
+      updateSummary(label, null);
+    }
+
+    function selectTime(time, dateLabel) {
+      selectedTime = time;
+      document.querySelectorAll('.time-slot').forEach(el => {
+        el.classList.remove('time-selected');
+        if (el.textContent === time) el.classList.add('time-selected');
+      });
+      updateSummary(dateLabel, time);
+    }
+
+    function updateSummary(dateLabel, time) {
+      const txt = document.getElementById('bookingSummaryText');
+      if (dateLabel && time) {
+        txt.textContent = '📅 ' + dateLabel + ' at ' + time;
+      } else if (dateLabel) {
+        txt.textContent = '📅 ' + dateLabel + ' — now pick a time below';
+      } else {
+        txt.textContent = 'Select a date and time on the calendar';
+      }
+    }
+
+    document.getElementById('calPrev').addEventListener('click', () => {
+      calDate.setMonth(calDate.getMonth() - 1);
+      renderCalendar();
+    });
+
+    document.getElementById('calNext').addEventListener('click', () => {
+      calDate.setMonth(calDate.getMonth() + 1);
+      renderCalendar();
+    });
+
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('bName').value.trim();
+      const phone = document.getElementById('bPhone').value.trim();
+      const type = document.getElementById('bType').value;
+      if (!name || !phone || !type) { alert('Please fill in your name, phone, and project type.'); return; }
+      if (!selectedDate || !selectedTime) { alert('Please select a date and time on the calendar.'); return; }
+      // REPLACE: send booking data to your backend / CRM / calendar API here
+      this.style.display = 'none';
+      const msg = document.getElementById('bookingSummaryText').textContent;
+      document.getElementById('bookingSuccessMsg').innerHTML =
+        'Your visit is requested for <strong>' + msg.replace('📅 ','') + '</strong>.<br>We\'ll call to confirm shortly at <a href="tel:4107258430" style="color:var(--orange);font-weight:700;">(410) 725-8430</a>.';
+      document.getElementById('bookingSuccess').style.display = 'block';
+    });
+
+    renderCalendar();
+
+    // ════════════════════════════════════════════════
+    //  AI CHATBOT
+    // ════════════════════════════════════════════════
+    const chatFab   = document.getElementById('chatFab');
+    const chatWindow = document.getElementById('chatWindow');
+    const chatClose  = document.getElementById('chatClose');
+    const chatInput  = document.getElementById('chatInput');
+    const chatSendBtn = document.getElementById('chatSendBtn');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatBadge  = document.getElementById('chatBadge');
+
+    let chatOpen = false;
+    let chatStarted = false;
+
+    // Knowledge base — keyword → response
+    const KB = [
+      { keys: ['deck','decking','board','railing'], reply: "We do deck repairs, rebuilds, and full replacements — wood and composite. Whether it's a few rotted boards or an entire rebuild, we can handle it. Want to schedule a free look? 👇", qr: ['Book an estimate','Call us now'] },
+      { keys: ['porch','front porch','screened'], reply: "Porch repairs are one of our specialties. We fix rotted wood, replace boards, repair railings and steps, and restore porches to a safe, solid condition. What's going on with yours?", qr: ['Get a free estimate','More services'] },
+      { keys: ['price','cost','how much','quote','estimate'], reply: "We offer free on-site estimates — no cost, no obligation. We'll come out, assess the project, and give you a clear number before any work starts.", qr: ['Book a free estimate','Call (410) 725-8430'] },
+      { keys: ['license','licensed','insured','mhic'], reply: "Yes! Reyes Construction LLC is fully licensed under Maryland's Home Improvement Commission — MHIC License #153887. We're also insured for your protection.", qr: ['Learn more about us','Get an estimate'] },
+      { keys: ['area','location','serve','maryland','queenstown','eastern shore','shore','kent','talbot','anne'], reply: "We're based in Queenstown, MD and serve the Eastern Shore including Centreville, Chestertown, Stevensville, Kent Island, Easton, and surrounding Queen Anne's, Kent, and Talbot counties.", qr: ['Book an estimate','Call us'] },
+      { keys: ['interior','kitchen','bathroom','remodel','remodeling'], reply: "We handle interior remodeling including kitchen updates, bathroom renovations, and room modifications. Give us a call or send us the details and we'll set up a free consult.", qr: ['Schedule a visit','Request estimate'] },
+      { keys: ['exterior','siding','fascia','trim','outside'], reply: "Exterior repairs are part of what we do best — siding damage, fascia, trim, wood rot, and more. Catching these early saves a lot of money long-term.", qr: ['Book a free estimate','Call us'] },
+      { keys: ['carpentry','wood','custom','framing','door','window'], reply: "We do custom carpentry including trim installation, framing, door and window work, and finish carpentry. What do you have in mind?", qr: ['Get an estimate','More info'] },
+      { keys: ['repair','fix','broken','damage','damaged','rot','rotted'], reply: "We handle all kinds of property repairs — big and small. Tell me what's going on and I can let you know if it's something we typically handle.", qr: ['Describe your project','Book a visit'] },
+      { keys: ['hello','hi','hey','good morning','good afternoon','howdy'], reply: "Hey there! 👋 I'm here to help with questions about Reyes Construction LLC. What kind of project are you looking at?", qr: ['Deck or porch','Interior work','Exterior repairs','Get an estimate'] },
+      { keys: ['thank','thanks','thank you'], reply: "Of course! Feel free to reach out anytime. We're happy to help — that's what we're here for. 😊", qr: ['Book an estimate','Call us'] },
+      { keys: ['call','phone','contact','reach'], reply: "You can call or text us directly at (410) 725-8430. We're available Mon–Sat, 7 AM to 6 PM.", qr: ['Call (410) 725-8430','Book online'] },
+      { keys: ['book','schedule','appointment','visit','calendar'], reply: "You can book a free on-site estimate right on this page — just scroll up to the calendar and pick a date that works for you!", qr: ['Open booking calendar'] },
+      { keys: ['facebook','fb','review','recommend'], reply: "We're 100% recommended on Facebook! You can check out our page to see what our customers say about us.", qr: ['Book an estimate','Call us'] },
+    ];
+
+    const FALLBACK = [
+      "That's a great question! For specifics, it's best to give us a call at (410) 725-8430 so we can talk through the details.",
+      "I want to make sure you get accurate info — the best next step is a free estimate so we can see the project in person.",
+      "I can connect you with someone who can answer that directly. Want to schedule a quick call or visit?",
+    ];
+    let fallbackIdx = 0;
+
+    function getBotReply(text) {
+      const lower = text.toLowerCase();
+      for (const entry of KB) {
+        if (entry.keys.some(k => lower.includes(k))) {
+          return entry;
+        }
+      }
+      return { reply: FALLBACK[fallbackIdx++ % FALLBACK.length], qr: ['Book a free estimate','Call (410) 725-8430'] };
+    }
+
+    function addMsg(text, role) {
+      const wrap = document.createElement('div');
+      wrap.className = 'chat-msg ' + role;
+
+      if (role === 'bot') {
+        const av = document.createElement('div');
+        av.className = 'chat-msg-avatar';
+        av.innerHTML = '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>';
+        wrap.appendChild(av);
+      }
+
+      const bubble = document.createElement('div');
+      bubble.className = 'chat-msg-bubble';
+      bubble.textContent = text;
+      wrap.appendChild(bubble);
+      chatMessages.appendChild(wrap);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      return wrap;
+    }
+
+    function addTyping() {
+      const wrap = document.createElement('div');
+      wrap.className = 'chat-typing';
+      wrap.innerHTML = `<div class="chat-msg-avatar"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><div class="typing-dots"><span></span><span></span><span></span></div>`;
+      chatMessages.appendChild(wrap);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      return wrap;
+    }
+
+    function addQuickReplies(qrs) {
+      const wrap = document.createElement('div');
+      wrap.className = 'chat-quick-replies';
+      qrs.forEach(label => {
+        const btn = document.createElement('button');
+        btn.className = 'chat-qr';
+        btn.textContent = label;
+        btn.addEventListener('click', () => {
+          wrap.remove();
+          if (label === 'Call (410) 725-8430' || label === 'Call us now' || label === 'Call us') {
+            addMsg(label, 'user');
+            respondWith({ reply: "Great — give us a call at (410) 725-8430. We're available Mon–Sat, 7 AM–6 PM. 📞", qr: ['Book online instead'] });
+          } else if (label.toLowerCase().includes('book') || label.toLowerCase().includes('schedule') || label.toLowerCase().includes('calendar') || label.toLowerCase().includes('estimate') || label.toLowerCase().includes('visit')) {
+            addMsg(label, 'user');
+            respondWith({ reply: "Scroll up to the booking calendar — pick a date and time that works for you and we'll confirm your free estimate visit! 📅", qr: [] });
+            setTimeout(() => document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' }), 1200);
+          } else {
+            handleUserMessage(label);
+          }
+        });
+        wrap.appendChild(btn);
+      });
+      chatMessages.appendChild(wrap);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function respondWith(entry) {
+      const typing = addTyping();
+      const delay = 600 + Math.random() * 700;
+      setTimeout(() => {
+        typing.remove();
+        addMsg(entry.reply, 'bot');
+        if (entry.qr && entry.qr.length) addQuickReplies(entry.qr);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }, delay);
+    }
+
+    function handleUserMessage(text) {
+      if (!text.trim()) return;
+      addMsg(text, 'user');
+      chatInput.value = '';
+      respondWith(getBotReply(text));
+    }
+
+    function openChat() {
+      chatOpen = true;
+      chatWindow.classList.add('open');
+      chatBadge.style.display = 'none';
+      chatFab.querySelector('svg').innerHTML = '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>';
+      if (!chatStarted) {
+        chatStarted = true;
+        setTimeout(() => {
+          respondWith({
+            reply: "Hi there! 👋 I'm the Reyes Construction assistant. How can I help you today?",
+            qr: ['Deck or porch repair','Get an estimate','Service areas','Call (410) 725-8430']
+          });
+        }, 400);
+      }
+      chatInput.focus();
+    }
+
+    function closeChat() {
+      chatOpen = false;
+      chatWindow.classList.remove('open');
+      chatFab.querySelector('svg').innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>';
+    }
+
+    chatFab.addEventListener('click', () => chatOpen ? closeChat() : openChat());
+    chatClose.addEventListener('click', closeChat);
+    chatSendBtn.addEventListener('click', () => handleUserMessage(chatInput.value));
+    chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') handleUserMessage(chatInput.value); });
+
+    // Pulse badge after 4 seconds to draw attention
+    setTimeout(() => {
+      if (!chatOpen) chatBadge.style.animation = 'pulse 1.5s infinite';
+    }, 4000);
+  </script>
+
+</body>
+</html>
